@@ -23,8 +23,16 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+`Actions are an object that is sent to the reducer containing an action type and a payload. The reducer accepts the action, and uses the data from the payload to create a new state object. It knows how to use that data based on the action type. Once the new state object is created, it is sent to the store, where it replaces the previous state`
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+`Application state stores data that can be accessed by any component, while component state can only be accessed by the component it lives in, and that component's children via props. Application state is helpful because it allows data to be accessed from anywhere without having to worry about passing it down or using functions to update it from a child. This is good for data that needs to be accessed in mulitple places.  Component state is good for data that only needs to be accessed within one component, such as forms, where the entire app doesn't need to know what someone is typing in a login form, until that form is submitted`
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+`redux thunk allows us to dispatch multiple actions from our action creator, rather than returning a single action that is sent to the reducer. This means we can update state at both the start and end of a process, which can help catch errors and update the DOM to show that something is being done, and in general allows us to send actions conditionally to the reducer`
 
 ## Project Set Up
 
