@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getSmurfs } from '../actions'
 import './App.css';
 import { connect } from 'react-redux';
+import NewSmurf from './NewSmurf';
 
 /*
  to wire this component up you're going to need a few things.
@@ -25,6 +26,7 @@ class App extends Component {
           <p>{smurf.age} years old</p>
           <p>{smurf.height}</p>  
         </div>)}
+        <NewSmurf />
       </div>
     );
   }
